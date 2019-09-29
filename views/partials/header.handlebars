@@ -15,24 +15,8 @@
             </li>
         </ul>
         <form method="post" action="/users" class="form-inline my-2 my-lg-0">
-            <input name="user" class="form-control mr-sm-2" type="text" placeholder="User...">
+            <input value="{{{user}}}" name="user" class="form-control mr-sm-2" type="text" placeholder="User...">
             <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
 </nav>
-<main>
-    <div class="container">
-        <div class="row">
-            {{#each repos}}
-            <div class="card text-white bg-primary col-4 mt-5">
-                <div class="card-header">{{this.full_name}}</div>
-                <div class="card-body">
-                    <h4 class="card-title">{{this.full_name}}</h4>
-                    <p class="card-text">{{this.description}}</p>
-                </div>
-            </div>
-            {{else}}
-            <p class="empty">No content</p>
-            {{/each}}
-        </div>
-</main>
